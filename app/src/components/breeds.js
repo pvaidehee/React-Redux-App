@@ -3,8 +3,6 @@ import {getBreed, getDogPic} from '../action/action'
 import {connect} from 'react-redux';
 
 
-
-
 const Breeds = (props) => {
 console.log('here is the object keys', props.dogBreed)
     useEffect(() => {
@@ -21,10 +19,13 @@ const handleChange = (e) => {
     return(
 
         <div>
-            <div>Dog pics</div>
+            <h1>Dog pics</h1>
         <div>
+            <div className="labh">
 
-            <label >Choose a breed </label>
+            <h2>Choose a breed </h2>
+
+            </div>
 
           <select value={dogBreed} onChange={handleChange} id='dogs'>
               {Object.keys(props.dogBreed).map(breed => {
